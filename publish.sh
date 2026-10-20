@@ -16,7 +16,7 @@ for tag in "${tags[@]}"; do
     --target main \
     --title "$tag" \
     --notes "Fixture release for the Kiff action's tests. Do not edit or delete." \
-    "${flags[@]}"
+    ${flags[@]+"${flags[@]}"}
   # Keeps the publish times in order to the second.
   sleep 2
 done
